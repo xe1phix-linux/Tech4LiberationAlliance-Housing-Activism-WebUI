@@ -1,0 +1,106 @@
+import { Sidebar } from "@/components/dashboard/sidebar"
+import { OregonChecklist } from "@/components/compliance/oregon-checklist"
+import { GlassCard } from "@/components/ui/glass-card"
+import { Scale, Book, ExternalLink, AlertTriangle } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+export default function OregonCompliancePage() {
+  return (
+    <div className="min-h-screen bg-background grid-bg">
+      <Sidebar />
+
+      <main className="ml-64 p-6">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h1 className="text-2xl font-mono font-bold neon-text-cyan animate-flicker">OREGON COMPLIANCE</h1>
+            <p className="text-sm font-mono text-slate-400 mt-1">
+              ORS 659A Fair Housing compliance checklist and audit status
+            </p>
+          </div>
+          <Button className="bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 hover:bg-cyan-500/30 font-mono">
+            <Book className="w-4 h-4 mr-2" />
+            View Full Statutes
+          </Button>
+        </div>
+
+        {/* Quick Links */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <GlassCard className="group hover:border-cyan-400/50 transition-all cursor-pointer">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-mono text-slate-200">ORS 659A.421</p>
+                <p className="text-xs font-mono text-slate-500">Source of Income Protection</p>
+              </div>
+              <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors" />
+            </div>
+          </GlassCard>
+
+          <GlassCard className="group hover:border-cyan-400/50 transition-all cursor-pointer">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-mono text-slate-200">ORS 659A.403</p>
+                <p className="text-xs font-mono text-slate-500">SOGI Protection</p>
+              </div>
+              <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors" />
+            </div>
+          </GlassCard>
+
+          <GlassCard className="group hover:border-cyan-400/50 transition-all cursor-pointer">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-mono text-slate-200">Metro Code 10.01</p>
+                <p className="text-xs font-mono text-slate-500">Screening Criteria Limits</p>
+              </div>
+              <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors" />
+            </div>
+          </GlassCard>
+        </div>
+
+        {/* Compliance Checklist */}
+        <OregonChecklist />
+
+        {/* Legal Context */}
+        <GlassCard className="mt-6" variant="amber">
+          <div className="flex items-start gap-4">
+            <Scale className="w-6 h-6 text-amber-400 shrink-0" />
+            <div>
+              <h3 className="text-lg font-mono font-semibold text-amber-300 mb-2">Oregon Legal Context</h3>
+              <div className="space-y-3 text-sm font-mono text-slate-300">
+                <p>
+                  <strong className="text-amber-300">Source of Income (ORS 659A.421):</strong> Oregon is one of the
+                  strictest states for source of income protection. It is illegal to refuse to rent, or discriminate in
+                  terms/conditions, based on an applicant's lawful source of income, including Housing Choice Vouchers
+                  (Section 8), Social Security, unemployment benefits, or any other legal income source.
+                </p>
+                <p>
+                  <strong className="text-amber-300">Portland Metro Screening (Metro Code 10.01):</strong> Washington
+                  County falls under Portland Metro's fair housing ordinances, which limit criminal background lookback
+                  periods to 4 years for most offenses and restrict credit score thresholds. Landlords must conduct
+                  individualized assessments.
+                </p>
+                <p>
+                  <strong className="text-amber-300">Enforcement:</strong> Violations can result in civil penalties up
+                  to $50,000 for first offense and $100,000 for subsequent offenses, plus actual damages, attorney fees,
+                  and injunctive relief.
+                </p>
+              </div>
+            </div>
+          </div>
+        </GlassCard>
+
+        {/* Disclaimer */}
+        <div className="mt-6 p-4 rounded-lg bg-slate-900/50 border border-amber-500/20">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-5 h-5 text-amber-400 shrink-0" />
+            <p className="text-xs font-mono text-slate-400">
+              This compliance checklist is generated by AI analysis and is for informational purposes only. It does not
+              constitute legal advice. Organizations should consult with qualified Oregon fair housing counsel to ensure
+              full compliance with ORS 659A and local ordinances.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  )
+}
