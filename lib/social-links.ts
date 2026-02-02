@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   GitBranch,
   FileCode,
+  Youtube,
   type LucideIcon,
 } from "lucide-react"
 
@@ -87,38 +88,40 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     name: "Pastebin",
-    url: "https://pastebin.com/u/xe1phix",
+    url: "http://pastebin.com/u/xe1phix",
     icon: Clipboard,
     iconColor: "text-slate-400",
-    badge: "https://img.shields.io/badge/Pastebin-020000?style=flat&logo=pastebin&logoColor=white",
+    badge: "https://img.shields.io/badge/Pastebin-xe1phix-020000?style=flat&logo=pastebin&logoColor=white",
+  },
+  {
+    name: "YouTube",
+    url: "https://www.youtube.com/@xe1phix",
+    icon: Youtube,
+    iconColor: "text-red-500",
+    badge: "https://img.shields.io/badge/YouTube-@xe1phix-FF0000?style=flat&logo=youtube&logoColor=white",
+    extraBadges: [
+      "https://img.shields.io/youtube/channel/subscribers/UC4rzx4VToyHJDWbAEJ5cMxQ?style=social",
+    ],
   },
   {
     name: "Gmail - MarkRobertCurry",
     url: "mailto:markrobertcurry@gmail.com",
     icon: Mail,
     iconColor: "text-red-500",
-    badge: "https://img.shields.io/badge/GMail-MarkRobertCurry-EA4335?style=flat&logo=gmail",
+    badge: "https://img.shields.io/badge/Gmail-D14836?logo=gmail&logoColor=white",
+    extraBadges: [
+      "https://img.shields.io/badge/GMail-MarkRobertCurry-EA4335?style=flat&logo=gmail",
+    ],
   },
   {
-    name: "Gmail - Xe1phix",
-    url: "mailto:xe1phix@gmail.com",
-    icon: Mail,
-    iconColor: "text-red-500",
-    badge: "https://img.shields.io/badge/GMail-Xe1phix-EA4335?style=flat&logo=gmail",
-  },
-  {
-    name: "Gmail - Xe1phix.Shute",
-    url: "mailto:xe1phix.shute@gmail.com",
-    icon: Mail,
-    iconColor: "text-red-500",
-    badge: "https://img.shields.io/badge/GMail-Xe1phix.shute-EA4335?style=plastic&logo=gmail",
-  },
-  {
-    name: "Gmail - Xe1phix.Linux",
-    url: "mailto:xe1phix.linux@gmail.com",
-    icon: Mail,
-    iconColor: "text-red-500",
-    badge: "https://img.shields.io/badge/GMail-Xe1phix.linux-EA4335?style=social&logo=gmail",
+    name: "ProtonMail - MarkRobertCurry",
+    url: "mailto:markrobertcurry@protonmail.com",
+    icon: Lock,
+    iconColor: "text-purple-500",
+    badge: "https://img.shields.io/badge/Proton%20Mail-6D4AFF?logo=protonmail&logoColor=fff",
+    extraBadges: [
+      "https://img.shields.io/badge/ProtonMail-MarkRobertCurry-8B89CC?style=flat&logo=protonmail",
+    ],
   },
   {
     name: "ProtonMail - Xe1phix",
@@ -126,12 +129,8 @@ export const SOCIAL_LINKS: SocialLink[] = [
     icon: Lock,
     iconColor: "text-purple-500",
     badge: "https://img.shields.io/badge/ProtonMail-Xe1phix-8B89CC?style=flat&logo=protonmail",
-  },
-  {
-    name: "ProtonMail - MarkRobertCurry",
-    url: "mailto:markrobertcurry@protonmail.com",
-    icon: Lock,
-    iconColor: "text-purple-500",
-    badge: "https://img.shields.io/badge/ProtonMail-MarkRobertCurry-8B89CC?style=flat&logo=protonmail",
+    extraBadges: [
+      "https://img.shields.io/badge/Xe1phix-%40protonmail.ch-blue?style=plastic&logo=gnu",
+    ],
   },
 ]
