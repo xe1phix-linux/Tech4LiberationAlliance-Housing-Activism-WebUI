@@ -112,18 +112,6 @@ export function Sidebar() {
         </div>
       </div>
 
-      {/* System Status */}
-      <div className={cn(
-        "border-b border-cyan-500/20 shrink-0 transition-all duration-300",
-        isCollapsed ? "px-2 py-2" : "px-4 py-3"
-      )}>
-        <div className={cn("flex items-center text-xs font-mono", isCollapsed ? "justify-center" : "gap-2")}>
-          <Activity className="w-3 h-3 text-emerald-400 animate-pulse" />
-          {!isCollapsed && <span className="text-emerald-400">SYSTEM ACTIVE</span>}
-        </div>
-        {!isCollapsed && <div className="text-[10px] font-mono text-slate-500 mt-1">Washington County, OR</div>}
-      </div>
-
       {/* Navigation - scrollable */}
       <nav className={cn(
         "flex-1 py-4 space-y-1 overflow-y-auto scrollbar-thin scrollbar-track-slate-800/50 scrollbar-thumb-cyan-500/30 hover:scrollbar-thumb-cyan-500/50 transition-all duration-300",

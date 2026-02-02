@@ -2,6 +2,7 @@
 
 import { Sidebar } from "@/components/dashboard/sidebar"
 import { TopNavbar } from "@/components/navigation/top-navbar"
+import { BadgeFooter } from "@/components/navigation/badge-footer"
 import { GlobalFilter } from "@/components/dashboard/global-filter"
 import { StatsGrid, type StatData } from "@/components/dashboard/stats-grid"
 import { ComplianceGauges } from "@/components/dashboard/compliance-gauges"
@@ -119,17 +120,9 @@ export default function DashboardPage() {
 
         {/* Violation Table */}
         <ViolationTable />
-
-        {/* Footer */}
-        <div className="mt-8 text-center text-xs font-mono text-slate-500 border-t border-cyan-500/10 pt-6">
-          <p className="mb-2">
-            HOUSING ACTIVISM PROJECT v2.1 | Tech 4 Liberation Alliance | Federal FHA + ORS 659A + Metro Code
-          </p>
-          <p className="text-amber-400/60">
-            DISCLAIMER: AI-generated analysis. Not legal advice. Consult qualified counsel for compliance decisions.
-          </p>
-        </div>
       </main>
+
+      <BadgeFooter />
     </div>
   )
 }

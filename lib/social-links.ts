@@ -26,11 +26,10 @@ export interface SocialLink {
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     name: "GitLab",
-    url: "https://gitlab.com/xe1phix/ParrotLinux-Public-Kiosk-Project",
+    url: "https://gitlab.com/xe1phix",
     icon: Gitlab,
     iconColor: "text-orange-500",
-    badge: "https://badgen.net/gitlab/stars/xe1phix/ParrotLinux-Public-Kiosk-Project",
-    extraBadges: ["https://badgen.net/gitlab/forks/xe1phix/ParrotSec-Linux-Hardening-Project"],
+    badge: "https://img.shields.io/badge/GitLab-xe1phix-FC6D26?style=flat&logo=gitlab&logoColor=white",
   },
   {
     name: "GitHub",
@@ -108,29 +107,20 @@ export const SOCIAL_LINKS: SocialLink[] = [
     url: "mailto:markrobertcurry@gmail.com",
     icon: Mail,
     iconColor: "text-red-500",
-    badge: "https://img.shields.io/badge/Gmail-D14836?logo=gmail&logoColor=white",
-    extraBadges: [
-      "https://img.shields.io/badge/GMail-MarkRobertCurry-EA4335?style=flat&logo=gmail",
-    ],
+    badge: "https://img.shields.io/badge/GMail-markrobertcurry-EA4335?style=flat&logo=gmail&logoColor=white",
   },
   {
     name: "ProtonMail - MarkRobertCurry",
     url: "mailto:markrobertcurry@protonmail.com",
     icon: Lock,
     iconColor: "text-purple-500",
-    badge: "https://img.shields.io/badge/Proton%20Mail-6D4AFF?logo=protonmail&logoColor=fff",
-    extraBadges: [
-      "https://img.shields.io/badge/ProtonMail-MarkRobertCurry-8B89CC?style=flat&logo=protonmail",
-    ],
+    badge: "https://img.shields.io/badge/ProtonMail-markrobertcurry-6D4AFF?style=flat&logo=protonmail&logoColor=white",
   },
   {
     name: "ProtonMail - Xe1phix",
     url: "mailto:xe1phix@protonmail.ch",
     icon: Lock,
     iconColor: "text-purple-500",
-    badge: "https://img.shields.io/badge/ProtonMail-Xe1phix-8B89CC?style=flat&logo=protonmail",
-    extraBadges: [
-      "https://img.shields.io/badge/Xe1phix-%40protonmail.ch-blue?style=plastic&logo=gnu",
-    ],
+    badge: "https://img.shields.io/badge/ProtonMail-xe1phix-6D4AFF?style=flat&logo=protonmail&logoColor=white",
   },
 ]
