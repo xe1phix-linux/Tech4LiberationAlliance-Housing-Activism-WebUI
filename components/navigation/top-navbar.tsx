@@ -6,7 +6,7 @@ import { BadgeStrip } from "./badge-strip"
 
 export function TopNavbar() {
   return (
-    <div className="fixed top-0 left-64 right-0 z-30">
+    <div className="fixed top-0 left-16 md:left-64 right-0 z-30 transition-all duration-300">
       {/* Main Navbar */}
       <nav className="glass-panel border-b border-cyan-500/20 px-6 py-3">
         <div className="flex items-center justify-between">

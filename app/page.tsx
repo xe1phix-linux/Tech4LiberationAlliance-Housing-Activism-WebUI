@@ -1,10 +1,62 @@
+"use client"
+
 import { Sidebar } from "@/components/dashboard/sidebar"
 import { TopNavbar } from "@/components/navigation/top-navbar"
 import { GlobalFilter } from "@/components/dashboard/global-filter"
-import { StatsGrid } from "@/components/dashboard/stats-grid"
+import { StatsGrid, type StatData } from "@/components/dashboard/stats-grid"
 import { ComplianceGauges } from "@/components/dashboard/compliance-gauges"
 import { ViolationTable } from "@/components/dashboard/violation-table"
 import { LatencyHeatmap } from "@/components/dashboard/latency-heatmap"
+import { Gitlab, Github, BookOpen, Code, Star, GitFork } from "lucide-react"
+
+// Xe1phix profile activity stats
+const xe1phixStats: StatData[] = [
+  {
+    title: "GitLab Repositories",
+    value: 47,
+    subtitle: "Public projects",
+    icon: Gitlab,
+    variant: "cyan",
+    trend: { value: 12, direction: "up" },
+  },
+  {
+    title: "GitHub Contributions",
+    value: 1248,
+    subtitle: "This year",
+    icon: Github,
+    variant: "green",
+    trend: { value: 8, direction: "up" },
+  },
+  {
+    title: "Knowledge Base Articles",
+    value: 156,
+    subtitle: "Documentation entries",
+    icon: BookOpen,
+    variant: "magenta",
+  },
+  {
+    title: "Code Snippets",
+    value: 312,
+    subtitle: "Gists & pastes",
+    icon: Code,
+    variant: "amber",
+  },
+  {
+    title: "Stars Received",
+    value: 89,
+    subtitle: "Across all repos",
+    icon: Star,
+    variant: "cyan",
+    trend: { value: 15, direction: "up" },
+  },
+  {
+    title: "Fork Count",
+    value: 34,
+    subtitle: "Project forks",
+    icon: GitFork,
+    variant: "green",
+  },
+]
 
 export default function DashboardPage() {
   return (
@@ -12,20 +64,20 @@ export default function DashboardPage() {
       <Sidebar />
       <TopNavbar />
 
-      <main className="ml-64 mt-24 p-6">
+      <main className="ml-16 md:ml-64 mt-24 p-6 transition-all duration-300">
         {/* Header */}
         <div className="mb-6">
-          <h1 className="text-2xl font-mono font-bold neon-text-cyan animate-flicker">COMMAND CENTER</h1>
+          <h1 className="text-2xl font-mono font-bold neon-text-cyan animate-flicker">XE1PHIX DASHBOARD</h1>
           <p className="text-sm font-mono text-slate-400 mt-1">
-            Real-time forensic analysis of property management communications
+            Profile activity overview and project metrics
           </p>
         </div>
 
         {/* Global Filter */}
         <GlobalFilter />
 
-        {/* Stats Grid */}
-        <StatsGrid />
+        {/* Stats Grid - Xe1phix Profile Activity */}
+        <StatsGrid stats={xe1phixStats} />
 
         {/* Compliance Gauges */}
         <ComplianceGauges />
@@ -35,16 +87,16 @@ export default function DashboardPage() {
           {/* Latency Heatmap */}
           <LatencyHeatmap />
 
-          {/* Additional visualization placeholder */}
+          {/* Activity Distribution */}
           <div className="glass-panel rounded-lg p-6">
-            <h2 className="text-lg font-mono font-semibold text-cyan-300 mb-4">Violation Distribution by Type</h2>
+            <h2 className="text-lg font-mono font-semibold text-cyan-300 mb-4">Activity Distribution by Platform</h2>
             <div className="space-y-3">
               {[
-                { type: "Source of Income", count: 0, pct: 0 },
-                { type: "Steering", count: 0, pct: 0 },
-                { type: "Familial Status", count: 0, pct: 0 },
-                { type: "Disability", count: 0, pct: 0 },
-                { type: "National Origin", count: 0, pct: 0 },
+                { type: "GitLab", count: 47, pct: 35 },
+                { type: "GitHub", count: 32, pct: 24 },
+                { type: "Gists", count: 28, pct: 21 },
+                { type: "Documentation", count: 18, pct: 13 },
+                { type: "Other", count: 9, pct: 7 },
               ].map((item) => (
                 <div key={item.type}>
                   <div className="flex justify-between text-sm font-mono mb-1">

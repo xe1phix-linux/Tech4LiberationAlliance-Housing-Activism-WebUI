@@ -37,7 +37,7 @@ export function UserDropdown() {
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute right-0 top-12 w-96 bg-black rounded-lg border border-cyan-500/30 shadow-[0_0_30px_rgba(0,255,255,0.15)] z-[9999] overflow-hidden">
+        <div className="fixed right-4 top-16 w-96 bg-black rounded-lg border border-cyan-500/30 shadow-[0_0_30px_rgba(0,255,255,0.15)] z-[99999] overflow-hidden">
           {/* Header */}
           <div className="px-4 py-3 border-b border-cyan-500/20 bg-black">
             <p className="text-xs font-mono text-slate-400">Signed in as</p>
